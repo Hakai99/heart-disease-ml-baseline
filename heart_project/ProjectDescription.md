@@ -196,7 +196,7 @@ Run it locally and it opens in the browser at `http://localhost:8501`. It has fo
 | Tool | Used for |
 |---|---|
 | [Python 3.12](https://www.python.org/) | The programming language |
-| [Antigravity IDE](https://antigravity.google/) | Editing and running the notebook and app |
+| [VS Code](https://code.visualstudio.com/) | Editing and running the notebook and app |
 | [Jupyter Notebook](https://jupyter.org/) (`.ipynb`) | Step-by-step analysis with saved outputs |
 | [Google Colab](https://colab.research.google.com/) | Tried first; it can run the notebook if you prefer a cloud option |
 | [GitHub](https://github.com/) | Hosting and submitting the project |
