@@ -162,7 +162,7 @@ After the classical baseline worked, I added a small **variational quantum class
 | Random Forest | 76.7% |
 | Always guess the majority class | 53.3% |
 
-![Quantum vs classical on 2 features](images/quantum_comparison.png)
+![Quantum vs classical on 2 features](heart_project/images/quantum_comparison.png)
 
 **Example prediction:** for a patient with `oldpeak = 2.5` and `thal = 7` (a reversible defect), the quantum model gave an **89.2% probability of disease**, so it predicted disease. For comparison, a patient with `oldpeak = 1.0` and `thal = 3` (normal) got 26.9%.
 
@@ -181,11 +181,11 @@ Run it locally and it opens in the browser at `http://localhost:8501`. It has fo
 | **Enter a patient** | Type in one patient's 13 values and see each model's prediction and probability |
 | **Upload a CSV** | Upload a file of many patients and get predictions for all of them, plus accuracy if the file has a `target` column |
 
-<!-- Add your own screenshots to the images/ folder, then keep or edit these lines -->
-![Model comparison tab](images/model_comparison.png)
-![Confusion matrix](images/confusion_matrix.png)
-![Cross-validation boxplot](images/cv_boxplot.png)
-![Predicting one patient](images/enter_patient.png)
+<!-- Add your own screenshots to the heart_project/images/ folder, then keep or edit these lines -->
+![Model comparison tab](heart_project/images/model_comparison.png)
+![Confusion matrix](heart_project/images/confusion_matrix.png)
+![Cross-validation boxplot](heart_project/images/cv_boxplot.png)
+![Predicting one patient](heart_project/images/enter_patient.png)
 
 ---
 
