@@ -221,10 +221,11 @@ Run it locally and it opens in the browser at `http://localhost:8501`. It has fo
 | [Qiskit](https://qiskit.org/) | Building and simulating the 2-qubit quantum circuit |
 | [SciPy](https://scipy.org/) | The COBYLA optimiser that trains the quantum circuit |
 
-Install everything with one command:
+Install everything with these commands:
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib joblib streamlit ipykernel scipy qiskit
+python -m pip install --upgrade pip
+python -m pip install pandas numpy scikit-learn matplotlib joblib streamlit ipykernel scipy qiskit
 ```
 
 ---
@@ -232,18 +233,39 @@ pip install pandas numpy scikit-learn matplotlib joblib streamlit ipykernel scip
 ##  How to build and run it yourself
 
 1. **Get the data.** Download it from the [UCI Heart Disease page](https://archive.ics.uci.edu/dataset/45/heart+disease) (the Download button gives a zip). Unzip it and keep only `processed.cleveland.data`.
-2. **Create a project folder**, for example `heart_project`, and put the data file in it.
-3. **Install the libraries** with the `pip install` command above.
-4. **Open the folder** in your IDE (I used Antigravity) and open the notebook.
-5. **Select the Python kernel** (top right of the notebook) and click **Run All**.
+2. **Create a project folder**, for example `heart_project`, and put the project files and `processed.cleveland.data` in it.
+3. **Open a terminal** in the project folder. Make sure Python is installed; Python 3.12 is the version used for this project.
+4. **Install the project dependencies** by running these commands in the terminal:
+
+   ```bash
+   python -m pip install --upgrade pip
+   python -m pip install pandas numpy scikit-learn matplotlib joblib streamlit ipykernel scipy qiskit
+   ```
+
+5. **Train the models (if needed).** Open `heart_disease_prediction_local.ipynb` in your IDE or Jupyter Notebook, select the appropriate Python kernel, and click **Run All**.
    - Check that `df.shape` shows `(303, 14)`, then `(297, 14)` after cleaning.
-   - The model-saving cell prints `Saved heart_models.joblib`.
-   - The quantum section starts with `%pip install qiskit` (about 1 to 3 minutes the first time). If the next cell cannot find Qiskit, restart the kernel and run again. Training the quantum model takes roughly a minute.
-6. **Start the web app** from a terminal opened in the project folder:
+   - The model-saving cell should print `Saved heart_models.joblib`.
+   - The quantum section may install Qiskit the first time. If a notebook cell cannot find Qiskit after installation, restart the kernel and run the cell again.
+6. **Run the Streamlit web app.** In the terminal, from the project folder containing `HRTGUI.py`, run:
+
    ```bash
    python -m streamlit run HRTGUI.py
    ```
-7. **Open** `http://localhost:8501` if the browser does not open by itself. Press `Ctrl+C` in the terminal to stop the app.
+
+7. **Open the app in your browser.** Visit [http://localhost:8501](http://localhost:8501). The app may open automatically.
+8. **Stop the app** when finished by returning to the terminal and pressing `Ctrl+C`.
+
+### Quick start: run the app
+
+If the dependencies are installed and the trained model file is available, you can launch the app with:
+
+```bash
+python -m streamlit run HRTGUI.py
+```
+
+Then open `http://localhost:8501` in your browser.
+
+**Troubleshooting tip:** Run the install and launch commands with the same Python environment. If the app cannot load `heart_models.joblib`, run the notebook to create the model file or check that the terminal and notebook use the same Python environment.
 
 ### Where the outputs come from
 
