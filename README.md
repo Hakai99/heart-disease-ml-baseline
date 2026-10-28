@@ -50,10 +50,16 @@ I also built a small 2-qubit quantum classifier. On just two features it reached
 heart_project/
 ├── heart_disease_prediction_local.ipynb   # data cleaning, training, evaluation
 ├── HRTGUI.py                              # Streamlit web app
-├── processed.cleveland.data               # the dataset (Cleveland subset)
-├── heart_models.joblib                    # trained models (created by the notebook)
+├── processed.cleveland.data               # the dataset (Cleveland subset)                
 ├── images/                                # screenshots used in this README
-└── ProjectDescription.md
+|    ├── confusion_matrix.png
+|    ├── cv_boxplot.png
+|    ├── model_comparison.png
+|    ├── quantum_comparison.png
+|    ├── roc_curves.png                              
+└── output model/
+     └──heart_models.joblib                 # trained models (created by the notebook)
+README.md
 ```
 
 ---
